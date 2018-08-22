@@ -3,10 +3,12 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-// import Bio from '../components/Bio'
+import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import Header from '../components/Header'
 import { rhythm } from '../utils/typography'
+import css from './../style/index.module.css'
+
 const img = 'https://images.unsplash.com/photo-1534859108275-a3a6f52f0d46?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=803ae0bb5c9d85e9874525296351bae2&auto=format&fit=crop&w=1600&q=80'
 class BlogIndex extends React.Component {
   constructor() {
@@ -16,12 +18,23 @@ class BlogIndex extends React.Component {
     }
   }
 
-  // openBlog = () => {
-  //   if (!this.state.blog) {
-  //     this.setState({ blog: true })
-  //     console.log('opening...');
-  //   }
+  // _blog() {
+  //   if (this.state.blog) return [css.open, css.blog]
+  //   return [css.blog]
   // }
+  // _poster() {
+  //   if (this.state.blog) return [css.open, css.poster]
+  //   return [css.poster]
+  // }
+  _classes(el) {
+    let classes;
+    if (this.state.blog) {
+      classes = [css.open, css[el]]
+    }else{
+      classes = [css[el]]
+    }
+    return classes.join(' ')
+  }
 
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -31,6 +44,7 @@ class BlogIndex extends React.Component {
     )
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
     let blog = this.state.blog
+
     return (
       <Layout location={this.props.location}>
         <Helmet
@@ -39,28 +53,13 @@ class BlogIndex extends React.Component {
           title={siteTitle}
         />
         {/* <Bio /> */}
-        <img src={img} alt=""
-          style={{
-            position: 'absolute',
-            left: '2vmin',
-            bottom: '2vmin',
-            maxHeight: '90vh',
-            maxWidth: '60vh',
-            marginBottom: 0,
-            opacity: blog ? 0.2 : 1
-          }} />
-
-        <div style={{
-          position: 'relative',
-          transition: 'transform 900ms ease',
-          willChange: 'transform',
-          transformOrigin: 'top left',
-          transform: blog ? '' : 'translateX(130%) scale(.7)',
-        }}>
+        <img src={img} alt="" className={this._classes('poster')} />
+        <div
+          className={this._classes('blog')}>
           <h2 onClick={() => this.setState({ blog: !this.state.blog })}
+          className={css.blog__heading}
             style={{
               fontSize: rhythm(1.8),
-              position: 'absolute',
               left: '-30%',
               cursor: 'pointer',
               top: '1rem'
@@ -90,17 +89,19 @@ class BlogIndex extends React.Component {
               </article>
             )
           })}
-          {blog && <h4><Link style={{ boxShadow: 'none', marginTop: rhythm(1.1) }} to="/">Read All</Link></h4>}
+          {blog && <h4><Link style={{ boxShadow: 'none', marginTop: rhythm(1.1), marginBottom: rhythm(1.3) }} to="/">Read All</Link></h4>}
         </div>
 
         <div style={{ position: 'relative', backgroundColor: '#000', padding: '4vmin' }}>
-          <div style={{ position: 'absolute', right:'-4%', top: '-20%' }}>
+          <div style={{ right: '-4%', top: '-20%' }} className={css.bio__heading}>
             <Header normal={true} />
           </div>
           <h3>Who am I?</h3>
           <p>Lorem ipsum dolor sit amet.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, error.</p>
-          <i>helloitalic</i>
+          <p style={{ textAlign: 'right', fontFamily: 'Playfair Display,serif' }}><i>very cool</i></p>
+          <hr style={{ width: '20%', backgroundColor: 'white', margin: '1rem 80%' }} />
+          <Bio />
         </div>
 
       </Layout>

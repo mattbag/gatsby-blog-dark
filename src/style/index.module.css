@@ -1,0 +1,31 @@
+@media screen and (min-width: 80em) {
+    .blog {
+        position: relative;
+        will-change: transform;
+        transform-origin: top left;
+        transition: transform 900ms ease;
+        transform: translateX(130%) scale(.8);
+    }
+    .blog.open {
+        transform: translateX(0%) scale(1);
+    }
+    .blog__heading{
+        position: absolue;
+    }
+    .poster{
+        position: fixed;
+        left: 2vmin;
+        bottom: 2vmin;
+        max-height: 90vh;
+        max-width: 60vh;
+        margin-bottom: 0;
+    }
+    .poster.open{
+        opacity: 0.5;
+        filter: grayscale(1);
+    }
+    .bio{}
+    .bio__heading{
+        position: absolue;
+    }
+}
