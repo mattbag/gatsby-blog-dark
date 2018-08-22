@@ -14,12 +14,14 @@ class Bio extends React.Component {
         style={{
           display: 'flex',
           marginBottom: rhythm(2.5),
+          alignItems: 'flex-end'
         }}
       >
         <img
           src={profilePic}
           alt={`Kyle Mathews`}
           style={{
+            filter: 'grayscale(1)',
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
             width: rhythm(2),
@@ -27,10 +29,16 @@ class Bio extends React.Component {
           }}
         />
         <p>
-          Written by <strong>Kyle Mathews</strong> who lives and works in San
-          Francisco building useful things.{' '}
           <a href="https://twitter.com/kylemathews">
-            You should follow him on Twitter
+            LinkedIn
+          </a>
+          <span style={{ padding: 3 }}></span>
+          <a href="https://twitter.com/kylemathews">
+            Facebook
+          </a>
+          <span style={{ padding: 3 }}></span>
+          <a href="https://twitter.com/kylemathews">
+            Twitter
           </a>
         </p>
       </div>

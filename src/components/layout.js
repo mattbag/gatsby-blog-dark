@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
+import Header from './Header'
 
 class Template extends React.Component {
   render() {
@@ -10,29 +11,7 @@ class Template extends React.Component {
     let header
 
     // if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(2),
-            marginBottom: 0,
-            marginTop: 0,
-            position:'fixed',
-            right: '2rem',
-            bottom: '2rem',
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            Lisa Ye
-          </Link>
-        </h1>
-      )
+      
     // }
     return (
       <div
@@ -41,10 +20,10 @@ class Template extends React.Component {
           marginRight: 'auto',
           maxWidth: rhythm(24),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
-        {children}
+        }}>
+
+      {location.pathname !== rootPath &&  <Header />} 
+      {children}
       </div>
     )
   }

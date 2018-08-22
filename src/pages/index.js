@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 
 // import Bio from '../components/Bio'
 import Layout from '../components/layout'
+import Header from '../components/Header'
 import { rhythm } from '../utils/typography'
 const img = 'https://images.unsplash.com/photo-1534859108275-a3a6f52f0d46?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=803ae0bb5c9d85e9874525296351bae2&auto=format&fit=crop&w=1600&q=80'
 class BlogIndex extends React.Component {
@@ -45,7 +46,7 @@ class BlogIndex extends React.Component {
             bottom: '2vmin',
             maxHeight: '90vh',
             maxWidth: '60vh',
-            'margin-bottom': 0,
+            marginBottom: 0,
             opacity: blog ? 0.2 : 1
           }} />
 
@@ -53,25 +54,25 @@ class BlogIndex extends React.Component {
           position: 'relative',
           transition: 'transform 900ms ease',
           willChange: 'transform',
-          transformOrigin:'top left',
+          transformOrigin: 'top left',
           transform: blog ? '' : 'translateX(130%) scale(.7)',
         }}>
           <h2 onClick={() => this.setState({ blog: !this.state.blog })}
-          style={{
-            fontSize: rhythm(1.8),
-            position: 'absolute',
-            left: '-30%',
-            cursor: 'pointer',
-            top: '1rem'
-          }}>
-            <span 
+            style={{
+              fontSize: rhythm(1.8),
+              position: 'absolute',
+              left: '-30%',
+              cursor: 'pointer',
+              top: '1rem'
+            }}>
+            <span
               style={{
                 display: 'inline-block',
                 transition: 'transform 1000ms ease',
                 transform: blog ? 'rotate(405deg)' : ''
               }}>+</span>
             Blog</h2>
-          {posts.slice(0,3).map(({ node }) => {
+          {posts.slice(0, 3).map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
               <article key={node.fields.slug}>
@@ -89,12 +90,17 @@ class BlogIndex extends React.Component {
               </article>
             )
           })}
-          {
-            blog &&
-            <h4>
-            <Link style={{ boxShadow: 'none', marginTop: rhythm(1.1) }} to="/">Read All</Link>
-          </h4>
-          }
+          {blog && <h4><Link style={{ boxShadow: 'none', marginTop: rhythm(1.1) }} to="/">Read All</Link></h4>}
+        </div>
+
+        <div style={{ position: 'relative', backgroundColor: '#000', padding: '4vmin' }}>
+          <div style={{ position: 'absolute', right:'-4%', top: '-20%' }}>
+            <Header normal={true} />
+          </div>
+          <h3>Who am I?</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, error.</p>
+          <i>helloitalic</i>
         </div>
 
       </Layout>

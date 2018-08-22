@@ -23,6 +23,10 @@ theme.overrideThemeStyles = () => ({
   'blockquote':{
     color: 'inherit'
   },
+  'p':{
+    marginBottom: '.5rem'
+  },
+
   'a':{
     color: '#fff',
     fontFamily: 'Playfair Display, serif',
