@@ -32,7 +32,7 @@ theme.overrideThemeStyles = () => ({
   },
   'a:hover':{
     // color: '#eee',
-    transform:'translateY(-1px)'
+    transform:'translateY(-2px)'
   },
   'a.gatsby-resp-image-link': {
     boxShadow: 'none',
