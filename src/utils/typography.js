@@ -6,38 +6,43 @@ const theme = kirkhamTheme
 // theme.baseFontSize = '16px'
 
 theme.overrideThemeStyles = () => ({
-  'html, body':{
-    backgroundColor: '#111',
-    minHeight:'100vh',
-    color: '#eee',
+  'html, body': {
+    minHeight: '100vh',
+    color: '#666',
+    '-webkit-font-smoothing': 'antialiased',
+    '-moz-osx-font-smoothing': 'grayscale',
     // fontFamily: 'sans-serif'
   },
-  'body':{
-    borderRight: '2vmin solid #fff',
-    borderLeft: '2vmin solid #fff',
+  'body': {
+    backgroundColor: '#111',
+    border: '4px solid #fff',
+    // borderLeft: '2vmin solid #fff',
     overflow: 'auto'
   },
-  'h1,h2,h3,h4,h5,h6':{
+  'h1,h2,h3,h4,h5,h6': {
     color: '#fff',
     // fontWeight: '700'
   },
-  'blockquote':{
+  'blockquote': {
     color: 'inherit'
   },
-  'p':{
+  'p': {
     marginBottom: '.5rem'
   },
+  'p:hover': {
+    color: 'white'
+  },
 
-  'a':{
+  'a': {
     color: '#fff',
     fontFamily: 'Playfair Display, serif',
-    display:'inline-block',
-    transition:'transform 300ms ease-in',
+    display: 'inline-block',
+    transition: 'transform 300ms ease-in',
     // fontWeight:'300'
   },
-  'a:hover':{
+  'a:hover': {
     // color: '#eee',
-    transform:'translateY(-2px)'
+    transform: 'translateY(-2px)'
   },
   'a.gatsby-resp-image-link': {
     boxShadow: 'none',

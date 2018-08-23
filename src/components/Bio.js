@@ -17,6 +17,8 @@ class Bio extends React.Component {
           // alignItems: 'flex-end'
         }}
       >
+      <div>
+
         <img
           src={profilePic}
           alt={`Lisa Ye`}
@@ -25,15 +27,19 @@ class Bio extends React.Component {
             marginRight: rhythm(1),
             marginBottom: 0,
             width: rhythm(3),
-            height: rhythm(3),
           }}
-        />
+          />
+          </div>
         <div>
 
-        <p style={{fontSize:rhythm(1.1)}}>
+        <p style={{fontSize:rhythm(1.1), marginLeft: '-.3rem'}}>
           <Link to="/">Story</Link>
         </p>
         <p>
+        <a href="mailto:lisa.ye@libero.it">
+            Email
+          </a>
+          <span style={{ padding: 3 }}></span>
           <a href="https://twitter.com/kylemathews">
             LinkedIn
           </a>

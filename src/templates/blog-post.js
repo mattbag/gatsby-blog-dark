@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
-import Bio from '../components/Bio'
+// import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
 
@@ -21,6 +21,7 @@ class BlogPostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
+        <br/>
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
@@ -38,7 +39,7 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
-        <Bio />
+        {/* <Bio /> */}
 
         <ul
           style={{
