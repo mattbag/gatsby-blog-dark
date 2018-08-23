@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby'
-const Header = ({normal}) => {
+const Header = ({normal, size}) => {
 
     return (<h1
         style={{
-            fontSize: '4rem',
+            fontSize: (size || 4 )+ 'rem',
             marginBottom: 0,
             marginTop: 0,
             position: normal ? '': 'fixed',

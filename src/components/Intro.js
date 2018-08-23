@@ -5,26 +5,31 @@ import css from './../style/index.module.css'
 import Bio from '../components/Bio'
 import Header from '../components/Header'
 
-const img = 'https://images.unsplash.com/photo-1534859108275-a3a6f52f0d46?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=803ae0bb5c9d85e9874525296351bae2&auto=format&fit=crop&w=1600&q=80'
+const poster = `https://images.unsplash.com/photo-1506682346094-f6b22bf130eb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8766e60119d3bc8c1dc02916936844e6&auto=format&fit=crop&w=1566&q=80`
+// const curve = '../assets/svg/curve.svg'
+const curve1 = `<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="405 478 422 204" width="422" height="204"><path d=" M 405 682 L 827 682 L 827 478 Q 816 558 799 624 Q 775.022 717.092 504 610 Q 550 651 405 682 Z " fill="rgb(17,17,17)"/></svg>`
+const curve2 = `<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="301 753 597 173" width="597" height="173"><path d=" M 804 873 C 662.082 927.966 444.626 916.457 301 926 L 898 926 L 898 753 Q 888.544 840.255 804 873 Z " fill="rgb(17,17,17)"/></svg>`
+const curve3 = `<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="405 459.211 422 222.789" width="422" height="222.789"><path d=" M 405 682 L 827 682 L 827 478 Q 644 423 645 529 Q 646 635 545 583 Q 550 651 405 682 Z " fill="rgb(17,17,17)"/></svg>`
+const curve4 = `<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="402 424.351 421 100.649" width="421" height="100.649"><path d=" M 690 453 C 609.233 502.962 528 399 402 525 L 823 525 L 823 447 Q 777.494 398.878 690 453 Z " fill="rgb(17,17,17)"/></svg>`
+const curves = [curve1, curve2,curve3,curve4]
 
 const Intro = () =>
-    <div style={{
-        minHeight: '90vh', display: 'flex', alignItems: 'center', marginBottom: '-1rem',
-        flexWrap: 'wrap'
-    }}>
+    <>
+        <div style={{ position: 'relative' }}>
 
-        <img src={img} alt="lisa ye poster" style={{
-            maxWidth: '50vw', flex:'1 0 350px' }} className={css.poster} />
+            <img src={poster} alt="lisa ye poster" className={css.poster} />
 
-        <div style={{ 
-            position:'relative',
-            padding: '0 2rem 2rem', 
-            marginLeft: '-1rem',
-         flex:'1 1 350px',
-         maxWidth:'500px'
-     }} className={`${css.bg}`}>
-            <div className={css.bio__heading}>
-                <Header normal={true} />
+            <div dangerouslySetInnerHTML={{ __html: curves[(Math.floor(Math.random() * curves.length)) ] }} className={css.curver} />
+        </div>
+
+        <div style={{
+            position: 'relative',
+            padding: '0 2rem 2rem',
+            margin: 'auto',
+            maxWidth: '50rem'
+        }} className={`${css.bg}`}>
+            <div>
+                <Header normal={true} size={8}/>
             </div>
 
             <br />
@@ -32,10 +37,10 @@ const Intro = () =>
             <p>Lorem ipsum dolor sit amet.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, error.</p>
 
-            <hr style={{ width: '20%', backgroundColor: 'white', margin: '2rem 80%' }} />
+            <hr />
             <Bio />
-        </div>
 
-    </div>
+        </div>
+    </>
 
 export default Intro;
