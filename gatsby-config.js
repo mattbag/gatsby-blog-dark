@@ -48,11 +48,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Lisa Ye`,
+        short_name: `Lisa Ye`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#000000`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `src/assets/gatsby-icon.png`,
       },

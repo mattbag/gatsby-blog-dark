@@ -13,7 +13,8 @@ theme.overrideThemeStyles = () => ({
     // fontFamily: 'sans-serif'
   },
   'body':{
-    border: '2vmin solid #fff',
+    borderRight: '2vmin solid #fff',
+    borderLeft: '2vmin solid #fff',
     overflow: 'auto'
   },
   'h1,h2,h3,h4,h5,h6':{

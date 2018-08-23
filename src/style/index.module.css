@@ -14,18 +14,23 @@
     }
     .poster{
         position: fixed;
-        left: 2vmin;
-        bottom: 2vmin;
-        max-height: 90vh;
-        max-width: 60vh;
+        right: 2vmin;
+        top: 0;
+        max-height: 96vh;
+        /* max-width: 60vh; */
         margin-bottom: 0;
-    }
-    .poster.open{
-        opacity: 0.5;
+        opacity: .7;
         filter: grayscale(1);
+    }
+    .poster:hover{
+        filter: grayscale(0);
+        opacity: 1;
     }
     .bio{}
     .bio__heading{
         position: absolue;
+    }
+    .bg{
+        background-color: #111;
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 // import { Link } from 'gatsby'
+import Bio from '../components/Bio'
 
 import { rhythm, scale } from '../utils/typography'
 import Header from './Header'
@@ -11,7 +12,7 @@ class Template extends React.Component {
     let header
 
     // if (location.pathname === rootPath) {
-      
+
     // }
     return (
       <div
@@ -22,8 +23,12 @@ class Template extends React.Component {
           // padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}>
 
-      {location.pathname !== rootPath &&  <Header />} 
-      {children}
+        {location.pathname !== rootPath && <Header />}
+        {children}
+        <div style={{padding: '1rem 0'}}>
+          <Bio />
+          <hr style={{width:'20%', backgroundColor:'#fff', margin: '1rem 0'}}/>
+        </div>
       </div>
     )
   }

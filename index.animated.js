@@ -30,7 +30,7 @@ class BlogIndex extends React.Component {
     let classes;
     if (this.state.blog) {
       classes = [css.open, css[el]]
-    } else {
+    }else{
       classes = [css[el]]
     }
     return classes.join(' ')
@@ -52,38 +52,25 @@ class BlogIndex extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
-
+        {/* <Bio /> */}
         <img src={img} alt="" className={this._classes('poster')} />
-
-        <div style={{ height: '90vh', display: 'flex', alignItems: 'center' }}>
-
-          <div style={{ position: 'relative', padding: '0 4vmin 4vmin' }} className={css.bg}>
-            <div style={{position:'absolute', top: '-20%' }} className={css.bio__heading}>
-              <Header normal={true} />
-            </div>
-            <br/>
-            <h3>Who am I?</h3>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, error.</p>
-            <p style={{ textAlign: 'right', fontFamily: 'Playfair Display,serif' }}><i>very cool</i></p>
-            <hr style={{ width: '20%', backgroundColor: 'white', margin: '1rem 80%' }} />
-            <Bio />
-          </div>
-          
-        </div>
-
-        <div className={css.bg} style={{position:'relative', padding:'1rem'}}>
-          <Link to="/">
-          <h2
+        <div
+          className={this._classes('blog')}>
+          <h2 onClick={() => this.setState({ blog: !this.state.blog })}
+          className={css.blog__heading}
             style={{
               fontSize: rhythm(1.8),
               left: '-30%',
               cursor: 'pointer',
               top: '1rem'
             }}>
-            <span>+</span>
+            <span
+              style={{
+                display: 'inline-block',
+                transition: 'transform 1000ms ease',
+                transform: blog ? 'rotate(405deg)' : ''
+              }}>+</span>
             Blog</h2>
-            </Link>
           {posts.slice(0, 3).map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
@@ -102,10 +89,20 @@ class BlogIndex extends React.Component {
               </article>
             )
           })}
-         <h4><Link style={{ boxShadow: 'none', marginTop: rhythm(1.1), marginBottom: rhythm(1.3) }} to="/">Read All</Link></h4>
+          {blog && <h4><Link style={{ boxShadow: 'none', marginTop: rhythm(1.1), marginBottom: rhythm(1.3) }} to="/">Read All</Link></h4>}
         </div>
 
-
+        <div style={{ position: 'relative', backgroundColor: '#000', padding: '4vmin' }}>
+          <div style={{ right: '-4%', top: '-20%' }} className={css.bio__heading}>
+            <Header normal={true} />
+          </div>
+          <h3>Who am I?</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, error.</p>
+          <p style={{ textAlign: 'right', fontFamily: 'Playfair Display,serif' }}><i>very cool</i></p>
+          <hr style={{ width: '20%', backgroundColor: 'white', margin: '1rem 80%' }} />
+          <Bio />
+        </div>
 
       </Layout>
     )

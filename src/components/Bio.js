@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'gatsby'
 // Import typefaces
 import 'typeface-montserrat'
 import 'typeface-merriweather'
@@ -29,6 +29,8 @@ class Bio extends React.Component {
           }}
         />
         <p>
+          <Link to="/">Story</Link>
+          <span style={{ padding: 6 }}></span>
           <a href="https://twitter.com/kylemathews">
             LinkedIn
           </a>
