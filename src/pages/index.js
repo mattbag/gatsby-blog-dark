@@ -57,8 +57,8 @@ class BlogIndex extends React.Component {
 
         <div style={{ height: '90vh', display: 'flex', alignItems: 'center' }}>
 
-          <div style={{ position: 'relative', padding: '0 4vmin 4vmin' }} className={css.bg}>
-            <div style={{position:'absolute', top: '-20%' }} className={css.bio__heading}>
+          <div style={{ position: 'relative', padding: '0 2rem 2rem' }} className={`${css.bg} ${css.border}`}>
+            <div style={{position:'absolute', top: '-18%' }} className={css.bio__heading}>
               <Header normal={true} />
             </div>
             <br/>
@@ -72,24 +72,29 @@ class BlogIndex extends React.Component {
           
         </div>
 
-        <div className={css.bg} style={{position:'relative', padding:'1rem'}}>
-          <Link to="/">
+        <div className={`${css.bg} ${css.border}`} style={{position:'relative', padding:'1rem'}}>
+          
           <h2
             style={{
+              position:'absolute',
               fontSize: rhythm(1.8),
               left: '-30%',
               cursor: 'pointer',
               top: '1rem'
             }}>
+            <Link to="/">
             <span>+</span>
-            Blog</h2>
+            Blog
             </Link>
+            </h2>
           {posts.slice(0, 3).map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
-              <article key={node.fields.slug}>
+              <article key={node.fields.slug} style={{padding:'.7rem 0'}}>
                 <h3
                   style={{
+
+                    // marginLeft: rhythm(1 / 2 * -1 ),
                     marginBottom: rhythm(1 / 4),
                   }}
                 >
@@ -97,16 +102,15 @@ class BlogIndex extends React.Component {
                     {title}
                   </Link>
                 </h3>
-                <small>{node.frontmatter.date}</small>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <small style={{color:'#666'}}>{node.frontmatter.date}</small>
+                <div style={{padding: 5}}>
+                <p style={{fontSize: '.8rem'}} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                </div>
               </article>
             )
           })}
-         <h4><Link style={{ boxShadow: 'none', marginTop: rhythm(1.1), marginBottom: rhythm(1.3) }} to="/">Read All</Link></h4>
+         <h5><Link style={{ boxShadow: 'none', marginTop: rhythm(1.1) }} to="/">Read All</Link></h5>
         </div>
-
-
-
       </Layout>
     )
   }

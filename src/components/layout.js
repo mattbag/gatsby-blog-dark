@@ -25,7 +25,7 @@ class Template extends React.Component {
 
         {location.pathname !== rootPath && <Header />}
         {children}
-        <div style={{padding: '1rem 0'}}>
+        <div style={{padding: '2rem 0'}}>
           <Bio />
           <hr style={{width:'20%', backgroundColor:'#fff', margin: '1rem 0'}}/>
         </div>

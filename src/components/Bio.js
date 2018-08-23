@@ -14,23 +14,26 @@ class Bio extends React.Component {
         style={{
           display: 'flex',
           // marginBottom: rhythm(2.5),
-          alignItems: 'flex-end'
+          // alignItems: 'flex-end'
         }}
       >
         <img
           src={profilePic}
-          alt={`Kyle Mathews`}
+          alt={`Lisa Ye`}
           style={{
             filter: 'grayscale(1)',
-            marginRight: rhythm(1 / 2),
+            marginRight: rhythm(1),
             marginBottom: 0,
-            width: rhythm(2),
-            height: rhythm(2),
+            width: rhythm(3),
+            height: rhythm(3),
           }}
         />
-        <p>
+        <div>
+
+        <p style={{fontSize:rhythm(1.1)}}>
           <Link to="/">Story</Link>
-          <span style={{ padding: 6 }}></span>
+        </p>
+        <p>
           <a href="https://twitter.com/kylemathews">
             LinkedIn
           </a>
@@ -43,6 +46,7 @@ class Bio extends React.Component {
             Twitter
           </a>
         </p>
+        </div>
       </div>
     )
   }

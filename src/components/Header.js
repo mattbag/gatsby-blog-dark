@@ -10,6 +10,7 @@ const Header = ({normal}) => {
             position: normal ? '': 'fixed',
             right: '2rem',
             bottom: '2rem',
+            letterSpacing: 4
         }}
     >
         <Link
