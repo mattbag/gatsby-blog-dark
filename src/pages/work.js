@@ -35,7 +35,7 @@ class WorkPage extends React.Component {
           title={`Work - ${siteTitle}`}
         />
 
-        {List(posts, 'work', 'Work')}
+        {List(posts, true, 'Work')}
 
       </Layout>
     )

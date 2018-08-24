@@ -35,7 +35,7 @@ class BlogIndex extends React.Component {
           title={`Blog - ${siteTitle}`}
         />
 
-        {List(posts, 'blog', 'Blog')}
+        {List(posts, false, 'Blog')}
 
       </Layout>
     )

@@ -11,7 +11,7 @@ const List = (posts, filter, title, limit) =>
             style={{
                 fontSize: rhythm(1.8),
             }}>
-            <Link to={`/${filter || 'blog'}`} style={{ textDecoration: 'none' }}>
+            <Link to={`/${filter ? 'work': 'blog'}`} style={{ textDecoration: 'none' }}>
                 <span>+</span>
                 {title}
             </Link>

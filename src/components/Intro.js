@@ -39,7 +39,7 @@ const Intro = () =>
             <p>Lorem ipsum dolor sit amet.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, error.</p>
 
-            <hr />
+            <hr style={{marginLeft:0, width:'10%'}}/>
             <div style={{ padding: '4vmax 0' }}>
                 <Bio />
             </div>
