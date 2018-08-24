@@ -27,12 +27,12 @@ const Header = ({ normal, size }) =>
         <Link
             style={linkStyle}
             to={'/story'}
-        > -Story
+        >- Story
         </Link>
             <Link
             style={linkStyle}
             to={'/work'}
-        > -Work
+        >- Work
         </Link>
         <Link
             style={linkStyle}

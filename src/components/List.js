@@ -44,7 +44,7 @@ const List = (posts, filter, title, limit) =>
                 )
             })}
             { limit > 0 && limit != null &&
-                <h5><Link style={{ marginTop: rhythm(1.1) }} to={`/${filter || 'blog'}`}>+ All</Link></h5>
+                <h5  style={{ margin: rhythm(0.5) }}><Link to={`/${filter || 'blog'}`}>+ All</Link></h5>
             }
     </div>
 

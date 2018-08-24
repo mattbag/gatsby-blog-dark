@@ -35,7 +35,7 @@ class Home extends React.Component {
           title={siteTitle}
         />
 
-        {List(posts, 'work', 'Work')}
+        {List(posts, 'work', 'Work',3)}
         <hr />
         {List(posts, null, 'Blog' ,3)}
 
