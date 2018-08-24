@@ -8,7 +8,7 @@ const theme = kirkhamTheme
 theme.overrideThemeStyles = () => ({
   'html, body': {
     minHeight: '100vh',
-    color: '#666',
+    color: '#ddd',
     '-webkit-font-smoothing': 'antialiased',
     '-moz-osx-font-smoothing': 'grayscale',
     // fontFamily: 'sans-serif'
@@ -18,6 +18,7 @@ theme.overrideThemeStyles = () => ({
   },
   'h1,h2,h3,h4,h5,h6': {
     color: '#fff',
+    fontStyle: 'italic',
     // fontWeight: '700'
   },
   'blockquote': {
@@ -26,10 +27,6 @@ theme.overrideThemeStyles = () => ({
   'p': {
     marginBottom: '.5rem'
   },
-  'p:hover': {
-    color: 'white'
-  },
-
   'a': {
     color: '#fff',
     fontFamily: 'Playfair Display, serif',

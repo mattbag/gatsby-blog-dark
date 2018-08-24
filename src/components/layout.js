@@ -27,7 +27,7 @@ class Template extends React.Component {
           }}>
           {children}
 
-          <div style={{ padding: '2rem 0' }}>
+          <div style={{ padding: '2rem 2vmax' }}>
             <Bio />
             <hr style={{ width: '20%', backgroundColor: '#fff', margin: '1rem 0' }} />
           </div>

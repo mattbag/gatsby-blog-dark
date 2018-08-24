@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from 'gatsby'
 // Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
+// import 'typeface-montserrat'
+// import 'typeface-merriweather'
 
 import profilePic from './profile-pic.jpg'
 import { rhythm } from '../utils/typography'
@@ -18,13 +18,12 @@ class Bio extends React.Component {
         }}
       >
       <div>
-
         <img
           src={profilePic}
           alt={`Lisa Ye`}
           style={{
             filter: 'grayscale(1)',
-            marginRight: rhythm(1),
+            paddingRight: '1vmax',
             marginBottom: 0,
             width: rhythm(3),
           }}
@@ -32,8 +31,8 @@ class Bio extends React.Component {
           </div>
         <div>
 
-        <p style={{fontSize:rhythm(1.1), marginLeft: '-.3rem'}}>
-          <Link to="/">Story</Link>
+        <p style={{fontSize:rhythm(1)}}>
+          <Link to="/">+ Story</Link>
         </p>
         <p>
         <a href="mailto:lisa.ye@libero.it">

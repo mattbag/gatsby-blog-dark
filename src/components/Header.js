@@ -4,7 +4,7 @@ const Header = ({normal, size}) => {
 
     return (<h1
         style={{
-            fontSize: (size || 4 )+ 'rem',
+            fontSize: (size || 4 )+ 'vmax',
             marginBottom: 0,
             marginTop: 0,
             position: normal ? '': 'fixed',

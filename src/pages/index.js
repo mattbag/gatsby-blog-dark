@@ -6,8 +6,9 @@ import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 
-import { rhythm } from '../utils/typography'
-import css from './../style/index.module.css'
+// import { rhythm } from '../utils/typography'
+// import css from './../style/index.module.css'
+import List from '../components/List'
 
 class BlogIndex extends React.Component {
   // constructor() {
@@ -34,89 +35,10 @@ class BlogIndex extends React.Component {
           title={siteTitle}
         />
 
-        <div className={`${css.border}`} style={{ position: 'relative', padding: '2rem' }}>
-
-          <h2
-            className={css.blog__heading}
-            style={{
-              fontSize: rhythm(1.8),
-            }}>
-            <Link to="/" style={{textDecoration:'none'}}>
-              <span>+</span>
-              Work
-            </Link>
-          </h2>
-          {posts.filter(p => {
-            const type = p.node.frontmatter.type
-            // console.log(type)
-            return type == 'work'
-          })
-            .slice(0, 3)
-            .map(({ node }) => {
-              const title = get(node, 'frontmatter.title') || node.fields.slug
-              return (
-                <article key={node.fields.slug} style={{ padding: '.7rem 0' }}>
-                  <h3
-                    style={{
-                      marginLeft: rhythm(1 / 3 * -1),
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                      {title}
-                    </Link>
-                  </h3>
-                  <small style={{ color: '#444' }}>{node.frontmatter.date}</small>
-
-                  <p style={{ fontSize: '.8rem' }} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-
-                </article>
-              )
-            })}
-          <h5><Link style={{ boxShadow: 'none', marginTop: rhythm(1.1) }} to="/">Check All</Link></h5>
-        </div>
+        {List(posts, 'work', 'Work')}
         <hr />
-        <div className={`${css.border}`} style={{ position: 'relative', padding: '2rem' }}>
+        {List(posts, null, 'Blog' ,3)}
 
-          <h2
-            className={css.blog__heading}
-            style={{
-              fontSize: rhythm(1.8),
-            }}>
-           <Link to="/" style={{textDecoration:'none'}}>
-              <span>+</span>
-              Blog
-            </Link>
-          </h2>
-          {posts.filter(p => {
-            const type = p.node.frontmatter.type
-            // console.log(type)
-            return type != 'work' || type == null
-          })
-            .slice(0, 3)
-            .map(({ node }) => {
-              const title = get(node, 'frontmatter.title') || node.fields.slug
-              return (
-                <article key={node.fields.slug} style={{ padding: '.7rem 0' }}>
-                  <h3
-                    style={{
-                      marginLeft: rhythm(1 / 3 * -1),
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                      {title}
-                    </Link>
-                  </h3>
-                  <small style={{ color: '#444' }}>{node.frontmatter.date}</small>
-
-                  <p style={{ fontSize: '.8rem' }} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-
-                </article>
-              )
-            })}
-          <h5><Link style={{ boxShadow: 'none', marginTop: rhythm(1.1) }} to="/">Read All</Link></h5>
-        </div>
       </Layout>
     )
   }

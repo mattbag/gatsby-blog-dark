@@ -1,10 +1,14 @@
 import React from 'react'
 
-const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
+import Layout from '../components/layout'
+
+const NotFoundPage = (props) => (
+  <Layout location={props.location}>
+    <div style={{ padding: '26vmin' }}>
+      <h1>PAGE NOT FOUND</h1>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    </div>
+  </Layout>
 )
 
 export default NotFoundPage
