@@ -35,9 +35,8 @@ class Bio extends React.Component {
           <Link to="/story">+ Story</Link>
         </p> */}
         <p>
-        <a href="mailto:lisa.ye@libero.it">
-            Email
-          </a>
+          
+        <a href="mailto:lisa.ye@libero.it">Email</a>
           <span style={{ padding: 3 }}></span>
           <a href="https://twitter.com/kylemathews">
             LinkedIn
@@ -50,6 +49,7 @@ class Bio extends React.Component {
           <a href="https://twitter.com/kylemathews">
             Twitter
           </a>
+
         </p>
         </div>
       </div>

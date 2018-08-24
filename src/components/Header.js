@@ -36,7 +36,7 @@ const Header = ({ normal, size }) =>
         </Link>
         <Link
             style={linkStyle}
-            to={'/Blog'}
+            to={'/blog'}
         >- Blog
         </Link>
         </p>

@@ -40,7 +40,7 @@ class StoryPage extends React.Component {
 
                 <hr />
 
-                {List(posts, 'work', 'Work')}
+                {List(posts, 'work', 'Work',5)}
             </Layout>
         )
     }
