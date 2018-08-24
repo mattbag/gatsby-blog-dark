@@ -32,7 +32,7 @@ class Bio extends React.Component {
         <div>
 
         <p style={{fontSize:rhythm(1)}}>
-          <Link to="/">+ Story</Link>
+          <Link to="/story">+ Story</Link>
         </p>
         <p>
         <a href="mailto:lisa.ye@libero.it">
