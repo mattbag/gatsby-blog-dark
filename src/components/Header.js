@@ -9,7 +9,7 @@ const linkStyle = {
 }
 const Header = ({ normal, size }) =>
     <div style={{
-        position: normal ? '' : 'fixed',
+        position: normal ? 'static' : 'fixed',
         right: '4vmax',
         bottom: '4vmax',
     }}>
@@ -21,7 +21,7 @@ const Header = ({ normal, size }) =>
                 letterSpacing: 4
             }}
         >
-            <Link to={'/'} style={linkStyle}>Lisa Ye</Link>
+            <Link to={'/'} style={linkStyle}>Lisa Ye {normal}</Link>
         </h2>
         <p>
         <Link

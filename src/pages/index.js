@@ -9,6 +9,7 @@ import Layout from '../components/layout'
 // import { rhythm } from '../utils/typography'
 // import css from './../style/index.module.css'
 import List from '../components/List'
+import Intro from '../components/Intro'
 
 class Home extends React.Component {
   // constructor() {
@@ -28,18 +29,25 @@ class Home extends React.Component {
     // let blog = this.state.blog
 
     return (
-      <Layout location={this.props.location}>
+      <div>
+
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
+        
+        <Intro />
 
-        {List(posts, 'work', 'Work',3)}
-        <hr />
-        {List(posts, null, 'Blog' ,3)}
+        <Layout>
 
-      </Layout>
+          {List(posts, 'work', 'Work', 3)}
+          <hr />
+          {List(posts, null, 'Blog', 3)}
+
+        </Layout>
+
+      </div>
     )
   }
 }

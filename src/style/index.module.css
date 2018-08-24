@@ -48,6 +48,11 @@ hr {
     margin: 2rem 80%
 }
 
+.wrap{
+    max-width: 40em;
+    margin: 0 auto;
+}
+
 .bg {
     background-color: #111;
 }
