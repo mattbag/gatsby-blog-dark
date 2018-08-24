@@ -21,7 +21,7 @@ const Header = ({ normal, size }) =>
                 // fontSize: (size || 8) + 'vmax',
                 marginBottom: 0,
                 marginTop: 0,
-                letterSpacing: 4
+                letterSpacing: -10
             }}
         >
             <Link to={'/'} style={linkStyle}>Lisa Ye</Link>
