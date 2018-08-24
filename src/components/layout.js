@@ -1,6 +1,6 @@
 import React from 'react'
 // import { Link } from 'gatsby'
-import PageTransition from 'gatsby-plugin-page-transitions';
+// import PageTransition from 'gatsby-plugin-page-transitions'
 
 import Bio from '../components/Bio'
 import Intro from '../components/Intro'
@@ -14,7 +14,7 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`
 
     return (
-      <PageTransition>
+      // <PageTransition>
         <>
           {location.pathname !== rootPath && <Header />}
           {location.pathname == rootPath && <Intro />}
@@ -34,7 +34,7 @@ class Layout extends React.Component {
 
           </div>
         </>
-      </PageTransition>
+      // </PageTransition>
     )
   }
 }
