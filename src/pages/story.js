@@ -34,7 +34,7 @@ class StoryPage extends React.Component {
                     meta={[{ name: 'description', content: siteDescription }]}
                     title={`Story - ${siteTitle}`}
                 />
-                <div style={{padding:'4vmax 0'}}>
+                <div style={{padding:'4vmax 1vmax'}}>
                     <h1>THE STORY SO FAR</h1>
                 </div>
 
