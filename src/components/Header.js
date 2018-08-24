@@ -12,7 +12,8 @@ const Header = ({ normal, size }) =>
         position: normal ? 'static' : 'fixed',
         right: '4vmax',
         bottom: '4vmax',
-        backgroundColor:'#111'
+        backgroundColor:'#111',
+        zIndex:9
     }}>
         <h2
             style={{
