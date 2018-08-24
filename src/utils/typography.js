@@ -14,9 +14,6 @@ theme.overrideThemeStyles = () => ({
     // fontFamily: 'sans-serif'
   },
   'body': {
-    backgroundColor: '#111',
-    border: '4px solid #fff',
-    // borderLeft: '2vmin solid #fff',
     overflow: 'auto'
   },
   'h1,h2,h3,h4,h5,h6': {
