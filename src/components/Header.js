@@ -17,7 +17,8 @@ const Header = ({ normal, size }) =>
     }}>
         <h2
             style={{
-                fontSize: (size || 4) + 'vmax',
+                fontSize:'8vmax',
+                // fontSize: (size || 8) + 'vmax',
                 marginBottom: 0,
                 marginTop: 0,
                 letterSpacing: 4
