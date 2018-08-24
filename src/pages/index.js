@@ -43,7 +43,7 @@ class Home extends React.Component {
 
           {List(posts, 'work', 'Work', 3)}
           <hr />
-          {List(posts, null, 'Blog', 3)}
+          {List(posts, 'blog', 'Blog', 3)}
 
         </Layout>
 
