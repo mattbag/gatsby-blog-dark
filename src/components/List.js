@@ -17,9 +17,9 @@ const List = (posts, filter, title, limit) =>
             </Link>
         </h2>
         {posts.filter(p => {
-            const type = p.node.frontmatter.type
+            const work = p.node.frontmatter.work
             // console.log(type)
-            return type == filter
+            return work == filter 
         })
             .slice(0, limit || posts.length)
             .map(({ node }) => {
@@ -44,7 +44,7 @@ const List = (posts, filter, title, limit) =>
                 )
             })}
             { limit > 0 && limit != null &&
-                <h5  style={{ margin: rhythm(0.5) }}><Link to={`/${filter || 'blog'}`}>+ All</Link></h5>
+                <h5  style={{ margin: rhythm(0.5) }}><Link to={`/${filter ? 'work': 'blog'}`}>+ All</Link></h5>
             }
     </div>
 

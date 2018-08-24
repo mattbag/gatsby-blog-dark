@@ -41,9 +41,9 @@ class Home extends React.Component {
 
         <Layout>
 
-          {List(posts, 'work', 'Work', 3)}
+          {List(posts, true, 'Work', 3)}
           <hr />
-          {List(posts, 'blog', 'Blog', 3)}
+          {List(posts, false, 'Blog', 3)}
 
         </Layout>
 
@@ -72,7 +72,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
-            type
+            work
           }
         }
       }
