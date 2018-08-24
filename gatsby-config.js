@@ -36,6 +36,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 500
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // {

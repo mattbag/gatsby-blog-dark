@@ -8,8 +8,8 @@ const Header = ({normal, size}) => {
             marginBottom: 0,
             marginTop: 0,
             position: normal ? '': 'fixed',
-            right: '2rem',
-            bottom: '2rem',
+            right: '5vmax',
+            bottom: '5vmax',
             letterSpacing: 4
         }}
     >
