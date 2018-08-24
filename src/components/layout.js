@@ -16,7 +16,7 @@ class Layout extends React.Component {
     return (
       // <PageTransition>
       <>
-        <Header normal={true}/>
+        <Header normal={location && location.pathname == '/'}/>
         <div
           style={{
             marginLeft: 'auto',
@@ -24,7 +24,7 @@ class Layout extends React.Component {
             maxWidth: rhythm(24),
             // padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}>
-          {rootPath}
+
           {children}
 
           <div style={{ padding: '4rem 2vmax' }}>

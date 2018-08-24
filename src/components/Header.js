@@ -21,7 +21,7 @@ const Header = ({ normal, size }) =>
                 letterSpacing: 4
             }}
         >
-            <Link to={'/'} style={linkStyle}>Lisa Ye {normal}</Link>
+            <Link to={'/'} style={linkStyle}>Lisa Ye</Link>
         </h2>
         <p>
         <Link

@@ -27,15 +27,15 @@ const Intro = () =>
             position: 'relative',
             padding: '0 2rem 2rem',
             margin: 'auto',
-            maxWidth: '50rem'
+            maxWidth: '40em'
         }} >
         
-            <div>
-                <Header normal={true} size={8} />
-            </div>
+
+                {/* <Header normal={true} size={8} /> */}
+
 
             <br />
-            <h3><i>Who am I?</i></h3>
+            <h2 style={{fontSize: '3vmax'}}><i>Who am I?</i></h2>
             <p>Lorem ipsum dolor sit amet.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, error.</p>
 
