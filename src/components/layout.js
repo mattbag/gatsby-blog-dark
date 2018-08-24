@@ -27,9 +27,9 @@ class Layout extends React.Component {
             }}>
             {children}
 
-            <div style={{ padding: '2rem 2vmax' }}>
+            <div style={{ padding: '4rem 2vmax' }}>
               <Bio />
-              <hr style={{ width: '20%', backgroundColor: '#fff', margin: '1rem 0' }} />
+              <hr />
             </div>
 
           </div>

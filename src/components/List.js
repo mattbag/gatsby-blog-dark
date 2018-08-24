@@ -11,7 +11,7 @@ const List = (posts, filter, title, limit) =>
             style={{
                 fontSize: rhythm(1.8),
             }}>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to={`/${filter || 'blog'}`} style={{ textDecoration: 'none' }}>
                 <span>+</span>
                 {title}
             </Link>
@@ -43,7 +43,7 @@ const List = (posts, filter, title, limit) =>
                     </article>
                 )
             })}
-        <h5><Link style={{ marginTop: rhythm(1.1) }} to="/">+ All</Link></h5>
+        <h5><Link style={{ marginTop: rhythm(1.1) }} to={`/${filter || 'blog'}`}>+ All</Link></h5>
     </div>
 
 

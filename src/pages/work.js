@@ -10,7 +10,7 @@ import Layout from '../components/layout'
 // import css from './../style/index.module.css'
 import List from '../components/List'
 
-class Home extends React.Component {
+class WorkPage extends React.Component {
   // constructor() {
   //   super()
   //   this.state = {
@@ -32,19 +32,17 @@ class Home extends React.Component {
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
-          title={siteTitle}
+          title={`Work - ${siteTitle}`}
         />
 
         {List(posts, 'work', 'Work')}
-        <hr />
-        {List(posts, null, 'Blog' ,3)}
 
       </Layout>
     )
   }
 }
 
-export default Home
+export default WorkPage
 
 export const pageQuery = graphql`
   query {

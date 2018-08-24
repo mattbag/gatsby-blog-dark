@@ -8,7 +8,7 @@ const NotFoundPage = (props) => (
   <Helmet
           title={'404'}
         />
-    <div style={{ padding: '26vmin' }}>
+    <div style={{ padding: '6vw' }}>
       <h1>PAGE NOT FOUND</h1>
       <p>You just hit a route that doesn&#39;t exist...</p>
       <h4><Link to="/">- Home</Link></h4>

@@ -7,7 +7,7 @@ const theme = kirkhamTheme
 
 theme.overrideThemeStyles = () => ({
   'html, body': {
-    minHeight: '100vh',
+    minHeight: '92vh',
     color: '#ddd',
     '-webkit-font-smoothing': 'antialiased',
     '-moz-osx-font-smoothing': 'grayscale',

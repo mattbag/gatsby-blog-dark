@@ -31,9 +31,9 @@ class Bio extends React.Component {
           </div>
         <div>
 
-        <p style={{fontSize:rhythm(1)}}>
+        {/* <p style={{fontSize:rhythm(1)}}>
           <Link to="/story">+ Story</Link>
-        </p>
+        </p> */}
         <p>
         <a href="mailto:lisa.ye@libero.it">
             Email
