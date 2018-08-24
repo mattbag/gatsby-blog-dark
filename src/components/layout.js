@@ -6,8 +6,6 @@ import Intro from '../components/Intro'
 import { rhythm, scale } from '../utils/typography'
 import Header from './Header'
 
-
-
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
