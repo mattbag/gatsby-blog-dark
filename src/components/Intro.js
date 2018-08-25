@@ -1,9 +1,9 @@
-import React from 'react';
-// import { Link } from 'gatsby'
+import React from 'react'
+import { graphql, StaticQuery } from 'gatsby'
 
 import css from './../style/index.module.css'
 import Bio from '../components/Bio'
-import Header from '../components/Header'
+// import Header from '../components/Header'
 
 const poster = `https://images.unsplash.com/photo-1506682346094-f6b22bf130eb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8766e60119d3bc8c1dc02916936844e6&auto=format&fit=crop&w=1566&q=80`
 // const curve = '../assets/svg/curve.svg'
@@ -14,37 +14,56 @@ const curve4 = `<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="non
 const curve5 = `<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="-110 107 1337 257" width="1337" height="257"><defs><clipPath id="_clipPath_TV3oRD9s2ZzMqnO18tv8baoCDNQDXgj9"><rect x="-110" y="107" width="1337" height="257"/></clipPath></defs><g clip-path="url(#_clipPath_TV3oRD9s2ZzMqnO18tv8baoCDNQDXgj9)"><g style="isolation:isolate"><path d=" M 273.554 264 C 530.053 313.962 1050.184 -40 1227 364 L -110 364 L -110 107 Q -4.306 209.878 273.554 264 Z " fill="rgb(17,17,17)"/></g></g></svg>`
 const curves = [curve1, curve2, curve3, curve4, curve5]
 
-const Intro = () =>
-    <div>
+const Intro = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        allConfigYaml {
+          edges {
+            node {
+              hp_intro
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <>
         <div style={{ position: 'relative' }}>
+          <img src={poster} alt="lisa ye poster" className={css.poster} />
 
-            <img src={poster} alt="lisa ye poster" className={css.poster} />
-
-            <div dangerouslySetInnerHTML={{ __html: curves[(Math.floor(Math.random() * curves.length))] }} className={css.curver} />
+          <div
+            dangerouslySetInnerHTML={{
+              __html: curves[Math.floor(Math.random() * curves.length)],
+            }}
+            className={css.curver}
+          />
         </div>
 
-        <div style={{
+        <div
+          style={{
             position: 'relative',
             padding: '0 2rem 2rem',
             margin: 'auto',
-            maxWidth: '40em'
-        }} >
-        
+            maxWidth: '40em',
+          }}
+        >
+          {/* <Header normal={true} size={8} /> */}
 
-                {/* <Header normal={true} size={8} /> */}
-
-
-            <br />
-            <h2 style={{fontSize: '3vmax'}}><i>Who am I?</i></h2>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, error.</p>
-
-            <hr style={{marginLeft:0, width:'10%'}}/>
-            <div style={{ padding: '4vmax 0' }}>
-                <Bio />
-            </div>
-
+          <br />
+          <div
+            dangerouslySetInnerHTML={{
+              __html: data.allConfigYaml.edges[0].node.hp_intro,
+            }}
+          />
+          <hr style={{ marginLeft: 0, width: '10%' }} />
+          <div style={{ padding: '4vmax 0' }}>
+            <Bio />
+          </div>
         </div>
-    </div>
+      </>
+    )}
+  />
+)
 
-export default Intro;
+export default Intro

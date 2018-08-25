@@ -63,7 +63,7 @@ const Header = ({ normal, size }) => (
             Lisa Ye
           </Link>
         </h2>
-        <p>
+        <p style={{ fontWeight: 700 }}>
           {urls.map(url => (
             <Link style={linkStyle} to={url.url} key={url.name}>
               <i>- {url.name}</i>
