@@ -8,6 +8,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/blog-post.js')
+    const storyPage = path.resolve('./src/templates/story-page.js')
+
     resolve(
       graphql(
         `
@@ -18,6 +20,7 @@ exports.createPages = ({ graphql, actions }) => {
             ) {
               edges {
                 node {
+                  id
                   fields {
                     slug
                   }
@@ -44,12 +47,15 @@ exports.createPages = ({ graphql, actions }) => {
           const next = index === 0 ? null : posts[index - 1].node
 
           const id = post.node.id
+          const slug = post.node.fields.slug
+          let component = slug === '/story/' ? storyPage : blogPost
+
           createPage({
             path: post.node.fields.slug,
-            component: blogPost,
+            component: component,
             context: {
               id,
-              slug: post.node.fields.slug,
+              slug,
               previous,
               next,
             },

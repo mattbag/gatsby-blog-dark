@@ -18,10 +18,15 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location}>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
+          meta={[
+            {
+              name: 'description',
+              content: post.frontmatter.description || siteDescription,
+            },
+          ]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        <br/>
+        <br />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
@@ -87,6 +92,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        description
         date(formatString: "MMMM DD, YYYY")
       }
     }

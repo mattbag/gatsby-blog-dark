@@ -1,37 +1,42 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-// import AboutPageTemplate from '../components/AboutPageTemplate'
-import Content, { HTMLContent } from '../components/Content'
+import Layout from '../components/layout'
+import Helmet from 'react-helmet'
 
-const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+const StoryPage = ({ data }) => {
+  const { markdownRemark: page } = data
 
   return (
-    <Layout>
-      {/* <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-      /> */}
-      <pre>{post}</pre>
+    <Layout location={location}>
+      <Helmet
+        htmlAttributes={{ lang: 'en' }}
+        meta={[{ name: 'description', content: page.frontmatter.description }]}
+        title={`${page.frontmatter.title} - ${'Lisa Ye'}`}
+      />
+      <div style={{ padding: '4vmax 1rem' }}>
+        <h1>{page.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: page.html }} />
+      </div>
+
+      <hr />
     </Layout>
   )
 }
 
-AboutPage.propTypes = {
+StoryPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default StoryPage
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const query = graphql`
+  query($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
+        description
       }
     }
   }
