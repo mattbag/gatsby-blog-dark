@@ -25,6 +25,7 @@
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
+    "gatsby-transformer-yaml": "^1.5.18",
     "lodash": "^4.17.5",
     "netlify-cms": "^2.0.9",
     "prismjs": "^1.15.0",
@@ -42,7 +43,7 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
-    "gh-pages": "^1.1.0",
+    "gh-pages": "^1.2.0",
     "prettier": "^1.12.0"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",

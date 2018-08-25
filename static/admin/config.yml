@@ -40,7 +40,7 @@ collections:
     files:
       - label: "Site Settings"
         name: "site_settings"
-        file: "src/settings.yml"
+        file: "src/config/settings.yml"
         fields:
           - {label: Homepage intro , name: "hp_intro", widget: "markdown"}
           - label: Social Link
