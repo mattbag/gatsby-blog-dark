@@ -52,6 +52,7 @@ collections:
           - label: Homepage Images
             name: hp_images
             widget: list
+            required: false
             fields:
               - {label: Name, name: name, widget: string, required: false}
               - {label: Image, name: image, widget: image, required: false}
