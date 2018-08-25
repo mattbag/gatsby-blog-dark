@@ -7,27 +7,27 @@ const theme = kirkhamTheme
 
 theme.overrideThemeStyles = () => ({
   'html, body': {
-    minHeight: '92vh',
+    // minHeight: '92vh',
     color: '#ddd',
     '-webkit-font-smoothing': 'antialiased',
     '-moz-osx-font-smoothing': 'grayscale',
     // fontFamily: 'sans-serif'
   },
-  'body': {
-    overflow: 'auto'
+  body: {
+    overflow: 'auto',
   },
   'h1,h2,h3,h4,h5,h6': {
     color: '#fff',
     fontStyle: 'italic',
     // fontWeight: '700'
   },
-  'blockquote': {
-    color: 'inherit'
+  blockquote: {
+    color: 'inherit',
   },
-  'p': {
-    marginBottom: '.5rem'
+  p: {
+    marginBottom: '.5rem',
   },
-  'a': {
+  a: {
     color: '#fff',
     fontFamily: 'Playfair Display, serif',
     display: 'inline-block',
@@ -36,7 +36,7 @@ theme.overrideThemeStyles = () => ({
   },
   'a:hover': {
     // color: '#eee',
-    transform: 'translateY(-2px)'
+    transform: 'translateY(-2px)',
   },
   'a.gatsby-resp-image-link': {
     boxShadow: 'none',
