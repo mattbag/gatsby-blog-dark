@@ -3,7 +3,7 @@ import React from 'react'
 // import PageTransition from 'gatsby-plugin-page-transitions'
 
 import Bio from '../components/Bio'
-import Intro from '../components/Intro'
+// import Intro from '../components/Intro'
 import Header from './Header'
 
 import { rhythm, scale } from '../utils/typography'
@@ -11,8 +11,8 @@ import { rhythm, scale } from '../utils/typography'
 class Layout extends React.Component {
   render() {
     const { location, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-
+    // const rootPath = `${__PATH_PREFIX__}/`
+    // console.log(location)
     return (
       // <PageTransition>
       <>

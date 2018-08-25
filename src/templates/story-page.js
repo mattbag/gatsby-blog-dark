@@ -6,9 +6,10 @@ import Helmet from 'react-helmet'
 
 const StoryPage = ({ data }) => {
   const { markdownRemark: page } = data
+  // console.log('l: ', location)
 
   return (
-    <Layout location={location}>
+    <Layout location={location || ''}>
       <Helmet
         htmlAttributes={{ lang: 'en' }}
         meta={[{ name: 'description', content: page.frontmatter.description }]}

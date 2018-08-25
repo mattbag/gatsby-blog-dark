@@ -6,6 +6,7 @@ const linkStyle = {
   textDecoration: 'none',
   color: 'inherit',
   padding: '.2rem .4rem',
+  fontWeght: 'bold',
 }
 const urls = [
   {
