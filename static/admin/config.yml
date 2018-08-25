@@ -54,4 +54,4 @@ collections:
             widget: list
             fields:
               - {label: Name, name: name, widget: string, required: false}
-              - {label: Image, name: image, widget: image}
+              - {label: Image, name: image, widget: image, required: false}

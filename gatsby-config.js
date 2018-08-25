@@ -7,11 +7,19 @@ module.exports = {
     siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
   },
   plugins: [
+    'gatsby-transformer-yaml',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/config`,
+        name: 'config',
       },
     },
     {
