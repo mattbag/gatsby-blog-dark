@@ -34,3 +34,14 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Description", name: "description", widget: "text",required: false}
+  
+  - name: "settings"
+    label: "Settings"
+    - file: "src/settings.yml"
+      fields:
+        - label: Social Link
+          name: social_link
+          widget: list
+          fields:
+            - {label: Name, name: name, widget: string}
+            - {label: Url, name: url, widget: string}
