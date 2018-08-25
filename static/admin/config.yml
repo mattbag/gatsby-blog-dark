@@ -37,7 +37,7 @@ collections:
   
   - name: "settings"
     label: "Settings"
-    - file: "src/settings.yml"
+    file: "src/settings.yml"
       fields:
         - label: Social Link
           name: social_link

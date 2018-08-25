@@ -7,6 +7,20 @@ const linkStyle = {
   color: 'inherit',
   padding: '.2rem .4rem',
 }
+const urls = [
+  {
+    url: '/story',
+    name: 'Story',
+  },
+  {
+    url: '/work',
+    name: 'Work',
+  },
+  {
+    url: '/blog',
+    name: 'Blog',
+  },
+]
 const Header = ({ normal, size }) => (
   <div
     style={{
@@ -33,15 +47,11 @@ const Header = ({ normal, size }) => (
       </Link>
     </h2>
     <p>
-      <Link style={linkStyle} to={'/story'}>
-        - Story
-      </Link>
-      <Link style={linkStyle} to={'/work'}>
-        - Work
-      </Link>
-      <Link style={linkStyle} to={'/blog'}>
-        - Blog
-      </Link>
+      {urls.map(url => (
+        <Link style={linkStyle} to={url.url} key={url.name}>
+          <i>- {url.name}</i>
+        </Link>
+      ))}
     </p>
   </div>
 )

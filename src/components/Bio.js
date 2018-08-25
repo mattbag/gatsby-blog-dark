@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'gatsby'
+// import {Link} from 'gatsby'
 // Import typefaces
 // import 'typeface-montserrat'
 // import 'typeface-merriweather'
@@ -14,43 +14,34 @@ class Bio extends React.Component {
         style={{
           display: 'flex',
           // marginBottom: rhythm(2.5),
-          alignItems: 'center'
+          alignItems: 'center',
         }}
       >
-      <div>
-        <img
-          src={profilePic}
-          alt={`Lisa Ye`}
-          style={{
-            filter: 'grayscale(1)',
-            paddingRight: '1vmax',
-            marginBottom: 0,
-            width: rhythm(3),
-          }}
-          />
-          </div>
         <div>
-
-        {/* <p style={{fontSize:rhythm(1)}}>
+          <img
+            src={profilePic}
+            alt={`Lisa Ye`}
+            style={{
+              filter: 'grayscale(1)',
+              paddingRight: '1vmax',
+              marginBottom: 0,
+              width: rhythm(3),
+            }}
+          />
+        </div>
+        <div>
+          {/* <p style={{fontSize:rhythm(1)}}>
           <Link to="/story">+ Story</Link>
         </p> */}
-        <p>
-          
-        <a href="mailto:lisa.ye@libero.it">Email</a>
-          <span style={{ padding: 3 }}></span>
-          <a href="https://twitter.com/kylemathews">
-            LinkedIn
-          </a>
-          <span style={{ padding: 3 }}></span>
-          <a href="https://twitter.com/kylemathews">
-            Facebook
-          </a>
-          <span style={{ padding: 3 }}></span>
-          <a href="https://twitter.com/kylemathews">
-            Twitter
-          </a>
-
-        </p>
+          <p>
+            <a href="mailto:lisa.ye@libero.it">Email</a>
+            <span style={{ padding: 3 }} />
+            <a href="https://twitter.com/kylemathews">LinkedIn</a>
+            <span style={{ padding: 3 }} />
+            <a href="https://twitter.com/kylemathews">Facebook</a>
+            <span style={{ padding: 3 }} />
+            <a href="https://twitter.com/kylemathews">Twitter</a>
+          </p>
         </div>
       </div>
     )
