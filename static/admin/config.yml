@@ -42,9 +42,16 @@ collections:
         name: "site_settings"
         file: "src/settings.yml"
         fields:
+          - {label: Homepage intro , name: "hp_intro", widget: "markdown"}
           - label: Social Link
             name: social_link
             widget: list
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Url, name: url, widget: string}
+          - label: Homepage Images
+            name: hp_images
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string, required: false}
+              - {label: Image, name: image, widget: image}
