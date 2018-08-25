@@ -37,7 +37,7 @@ class Home extends React.Component {
 
         <Intro />
 
-        <Layout location={location}>
+        <Layout location={this.props.location}>
           {List(posts, true, 'Work', 3)}
           <hr />
           {List(posts, false, 'Blog', 3)}

@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Helmet from 'react-helmet'
 
-const StoryPage = ({ data }) => {
+const StoryPage = ({ data, location }) => {
   const { markdownRemark: page } = data
   // console.log('l: ', location)
 
