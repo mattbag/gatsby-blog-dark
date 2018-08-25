@@ -1,12 +1,12 @@
 import React from 'react'
 // import { Link } from 'gatsby'
 // import PageTransition from 'gatsby-plugin-page-transitions'
+import { rhythm, scale } from '../utils/typography'
 
 import Bio from '../components/Bio'
 // import Intro from '../components/Intro'
 import Header from './Header'
-
-import { rhythm, scale } from '../utils/typography'
+import css from '../style/index.module.css'
 
 class Layout extends React.Component {
   render() {
@@ -15,8 +15,8 @@ class Layout extends React.Component {
     // console.log(location)
     return (
       // <PageTransition>
-      <>
-        <Header normal={location && location.pathname == '/'} />
+      <div className={css.pageFade}>
+        <Header normal={false} />
         <div
           style={{
             marginLeft: 'auto',
@@ -32,7 +32,7 @@ class Layout extends React.Component {
             <hr />
           </div>
         </div>
-      </>
+      </div>
       // </PageTransition>
     )
   }

@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-
 import Layout from '../components/layout'
 
 // import { rhythm } from '../utils/typography'
@@ -36,7 +35,6 @@ class WorkPage extends React.Component {
         />
 
         {List(posts, true, 'Work')}
-
       </Layout>
     )
   }

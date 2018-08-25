@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-
 import Layout from '../components/layout'
 
 // import { rhythm } from '../utils/typography'
@@ -30,23 +29,19 @@ class Home extends React.Component {
 
     return (
       <div>
-
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
-        
+
         <Intro />
 
-        <Layout>
-
+        <Layout location={location}>
           {List(posts, true, 'Work', 3)}
           <hr />
           {List(posts, false, 'Blog', 3)}
-
         </Layout>
-
       </div>
     )
   }

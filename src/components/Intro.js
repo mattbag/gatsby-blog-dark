@@ -29,7 +29,7 @@ const Intro = () => (
     `}
     render={data => (
       <>
-        <div style={{ position: 'relative' }}>
+        <div style={{ position: 'relative' }} className={css.pageFade}>
           <img src={poster} alt="lisa ye poster" className={css.poster} />
 
           <div
