@@ -3,7 +3,7 @@ title: this is a project hey
 draft: false
 work: true
 date: 2018-08-24T07:24:12.457Z
-thumbnail: /assets/screen-shot-2016-09-11-at-19.11.23.png
+thumbnail: /media/screen-shot-2016-09-11-at-19.11.23.png
 ---
 Bacon ipsum dolor amet andouille kevin fatback ham hock sirloin. Tail strip steak beef tri-tip biltong filet mignon. Tri-tip pork spare ribs doner short ribs turducken. Drumstick salami brisket, pork belly rump pork chop frankfurter landjaeger pastrami burgdoggen beef bresaola. Kevin biltong cow venison shankle tail picanha. Venison cupim sirloin doner, jowl short ribs chuck t-bone sausage tenderloin. Tail pork leberkas biltong ball tip jerky porchetta turducken.
 
