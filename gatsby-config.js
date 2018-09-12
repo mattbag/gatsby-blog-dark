@@ -68,7 +68,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#000000`,
         theme_color: `#000000`,
-        display: `minimal-ui`,
+        display: `fullscreen`,
         icon: `src/assets/favi.png`,
       },
     },
