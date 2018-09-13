@@ -64,11 +64,11 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Lisa Ye`,
-        short_name: `lisaye`,
+        short_name: `LisaYe`,
         start_url: `/`,
         background_color: `#000000`,
         theme_color: `#000000`,
-        display: `standalone`,
+        display: `fullscreen`,
         orientation : "natural",
         icon: `src/assets/favi.png`,
       },
