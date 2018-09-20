@@ -6,6 +6,7 @@ import { rhythm, scale } from '../utils/typography'
 import Bio from '../components/Bio'
 // import Intro from '../components/Intro'
 import Header from './Header'
+import '../style/master.css'
 import css from '../style/index.module.css'
 
 class Layout extends React.Component {
