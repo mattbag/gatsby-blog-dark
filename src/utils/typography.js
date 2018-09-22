@@ -23,6 +23,9 @@ theme.overrideThemeStyles = () => ({
   },
   blockquote: {
     color: 'inherit',
+    borderLeft: 'dashed .2rem #444',
+    marginBottom:'2rem',
+    marginTop:'2rem',
   },
   p: {
     marginBottom: '.5rem',

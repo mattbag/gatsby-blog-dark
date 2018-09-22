@@ -4,7 +4,7 @@ module.exports = {
     title: 'Lisa Ye',
     author: 'Lisa Ye',
     description: 'Portfolio',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    siteUrl: 'https://lisaye.netlify.com',
   },
   plugins: [
     'gatsby-transformer-yaml',
@@ -50,7 +50,7 @@ module.exports = {
     //     transitionTime: 500,
     //   },
     // },
-    `gatsby-plugin-netlify-cms`,
+    
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // {
@@ -64,11 +64,12 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Lisa Ye`,
-        short_name: `Lisa Ye`,
+        short_name: `LisaYe`,
         start_url: `/`,
         background_color: `#000000`,
         theme_color: `#000000`,
-        display: `minimal-ui`,
+        display: `fullscreen`,
+        orientation : "natural",
         icon: `src/assets/favi.png`,
       },
     },
@@ -80,5 +81,9 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
+    `gatsby-plugin-netlify-cms`,
+    // 'gatsby-plugin-netlify'
+    //gatsby-plugin-netlify
+    // "gatsby-plugin-netlify": "^2.0.0-rc.0",
   ],
 }

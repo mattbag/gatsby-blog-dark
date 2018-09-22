@@ -36,7 +36,7 @@ const List = (posts, filter, title, limit) =>
                                 {title}
                             </Link>
                         </h3>
-                        <small style={{ color: '#444' }}>{node.frontmatter.date}</small>
+                        <small>{node.frontmatter.date}</small>
 
                         <p style={{ fontSize: '.8rem' }} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
 

@@ -50,9 +50,10 @@ class BlogPostTemplate extends React.Component {
           style={{
             display: 'flex',
             flexWrap: 'wrap',
-            justifyContent: 'space-between',
+            justifyContent: 'space-around',
             listStyle: 'none',
             padding: 0,
+            margin: 0,
           }}
         >
           {previous && (
@@ -62,7 +63,7 @@ class BlogPostTemplate extends React.Component {
               </Link>
             </li>
           )}
-
+        <li><span>+</span></li>
           {next && (
             <li>
               <Link to={next.fields.slug} rel="next">
