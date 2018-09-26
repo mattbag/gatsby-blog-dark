@@ -35,7 +35,7 @@ collections:
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Description", name: "description", widget: "text",required: false}
 
-  - label: "Settings"
+  - label: "Home Settings"
     name: "settings"
     files:
       - label: "Site Settings"
@@ -43,6 +43,7 @@ collections:
         file: "src/config/settings.yml"
         fields:
           - {label: Homepage intro , name: "hp_intro", widget: "markdown"}
+          - {label: Hero Image, name: hero_image, widget: image, required: true}
           - label: Social Link
             name: social_link
             widget: list
