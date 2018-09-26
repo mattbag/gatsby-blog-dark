@@ -18,25 +18,19 @@ const Intro = () => (
   <StaticQuery
     query={graphql`
       query {
-        hp:allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/home.md/"}}) {
+        allConfigYaml {
           edges {
             node {
-              id
-              html
-              frontmatter {
-                hp_intro
-                hero_image
-              }
+              hp_intro
             }
           }
         }
       }
     `}
-    render={({hp}) => (
+    render={data => (
       <>
-      {/* {console.log(hp)} */}
         <div style={{ position: 'relative' }} className={css.pageFade}>
-          <img src={hp.edges[0].node.frontmatter.hero_image} alt="lisa ye poster" className={css.poster} />
+          <img src={poster} alt="lisa ye poster" className={css.poster} />
 
           <div
             dangerouslySetInnerHTML={{
@@ -59,14 +53,9 @@ const Intro = () => (
           <br />
           <div
             dangerouslySetInnerHTML={{
-              __html: hp.edges[0].node.html,
+              __html: data.allConfigYaml.edges[0].node.hp_intro,
             }}
           />
-          {/* <div
-            dangerouslySetInnerHTML={{
-              __html: hp.edges[0].node.frontmatter.hp_intro,
-            }}
-          /> */}
           <hr style={{ marginLeft: 0, width: '10%' }} />
           <div style={{ padding: '4vmax 0' }}>
             <Bio />
