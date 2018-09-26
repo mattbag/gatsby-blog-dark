@@ -1,7 +1,7 @@
 ---
-hp_intro: 'Fashion Designer, Blogger, Foody, Traveler'
+hp_intro: '## Fashion Designer, Blogger, Foody, Traveler'
 hero_image: /media/photo-1506682346094-f6b22bf130eb.jpeg
-description: meta desc yolo
+description: 'Fashion Designer, Blogger, Foody, Traveler... Lisa Ye'
 social_link:
   - name: Facebook
     url: facebook.com
