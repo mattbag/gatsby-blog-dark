@@ -9,7 +9,7 @@ const StoryPage = ({ data, location }) => {
   // console.log('l: ', location)
 
   return (
-    <Layout location={location || ''}>
+    <Layout location={location || ''} template={'story-page'}>
       <Helmet
         htmlAttributes={{ lang: 'en' }}
         meta={[{ name: 'description', content: page.frontmatter.description }]}

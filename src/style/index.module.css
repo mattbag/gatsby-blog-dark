@@ -95,7 +95,7 @@ hr {
 .pageFade {
   opacity: 0;
   will-change: opacity;
-  animation: pageFade 800ms linear 100ms 1 forwards;
+  animation: pageFade 1000ms linear 300ms 1 forwards;
 }
 
 @keyframes pageFade {

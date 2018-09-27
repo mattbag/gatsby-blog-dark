@@ -50,7 +50,9 @@ const Header = ({ normal, size }) => (
       >
         <h2
           style={{
-            fontSize: '8vmax',
+            textAlign:'right',
+            fontSize: '12vmin',
+            // fontSize: '8vmax',
             fontStyle: 'normal',
             fontWeight: '900',
             // fontSize: (size || 8) + 'vmax',
