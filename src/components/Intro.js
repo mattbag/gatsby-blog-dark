@@ -24,7 +24,6 @@ const Intro = () => (
               id
               html
               frontmatter {
-                hp_intro
                 hero_image
               }
             }
