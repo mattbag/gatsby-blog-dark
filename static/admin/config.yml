@@ -42,8 +42,8 @@ collections:
         name: "site_settings"
         file: "src/config/home.md"
         fields:
-          - {label: Homepage intro , name: "hp_intro", widget: "markdown"}
           - {label: Hero Image, name: hero_image, widget: image, required: true}
+          - {label: "Body", name: "body", widget: "markdown"}
           - {label: Seo Description, name: description, widget: text, required: false}
           - label: Social Link
             name: social_link

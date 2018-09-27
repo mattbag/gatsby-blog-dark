@@ -5,7 +5,7 @@ import css from './../style/index.module.css'
 import Bio from '../components/Bio'
 // import Header from '../components/Header'
 
-const poster = `https://images.unsplash.com/photo-1506682346094-f6b22bf130eb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8766e60119d3bc8c1dc02916936844e6&auto=format&fit=crop&w=1566&q=80`
+// const poster = `https://images.unsplash.com/photo-1506682346094-f6b22bf130eb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8766e60119d3bc8c1dc02916936844e6&auto=format&fit=crop&w=1566&q=80`
 // const curve = '../assets/svg/curve.svg'
 const curve1 = `<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="405 478 422 204" width="422" height="204"><path d=" M 405 682 L 827 682 L 827 478 Q 816 558 799 624 Q 775.022 717.092 504 610 Q 550 651 405 682 Z " fill="rgb(17,17,17)"/></svg>`
 const curve2 = `<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="301 753 597 173" width="597" height="173"><path d=" M 804 873 C 662.082 927.966 444.626 916.457 301 926 L 898 926 L 898 753 Q 888.544 840.255 804 873 Z " fill="rgb(17,17,17)"/></svg>`
