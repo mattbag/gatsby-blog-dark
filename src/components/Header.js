@@ -50,7 +50,9 @@ const Header = ({ normal, size }) => (
       >
         <h2
           style={{
-            fontSize: '8vmax',
+            textAlign:'right',
+            fontSize: '12vmin',
+            // fontSize: '8vmax',
             fontStyle: 'normal',
             fontWeight: '900',
             // fontSize: (size || 8) + 'vmax',
@@ -63,7 +65,7 @@ const Header = ({ normal, size }) => (
             Lisa Ye
           </Link>
         </h2>
-        <p style={{ fontWeight: 700 }}>
+        <p style={{ fontWeight: 700, textAlign:'right',marginRight:6 }}>
           {urls.map(url => (
             <Link style={linkStyle} to={url.url} key={url.name}>
               <i>- {url.name}</i>

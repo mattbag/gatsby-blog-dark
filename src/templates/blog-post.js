@@ -15,7 +15,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location}>
+      <Layout location={this.props.location} template={'blog-post'}>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[
@@ -51,21 +51,30 @@ class BlogPostTemplate extends React.Component {
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'space-around',
+            alignItems:'center',
             listStyle: 'none',
             padding: 0,
-            margin: 0,
+            margin:'3rem 0',
           }}
         >
-          {previous && (
-            <li>
+          {previous && previous.frontmatter.title && (
+            <li style={{
+              flex: '1 0 0'
+            }}>
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             </li>
           )}
-        <li><span>+</span></li>
-          {next && (
-            <li>
+        <li style={{
+          flex: '0 0 auto',
+          fontSize:'2rem'
+        }}><span>+</span></li>
+          {next && next.frontmatter.title && (
+             <li style={{
+              flex: '1 0 0',
+              textAlign:'right'
+            }}>
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>

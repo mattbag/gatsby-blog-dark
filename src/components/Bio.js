@@ -8,19 +8,22 @@ const Bio = ({ normal, size }) => (
   <StaticQuery
     query={graphql`
       query {
-        allConfigYaml {
+        hp:allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/home.md/"}}) {
           edges {
             node {
-              social_link {
+              id
+              frontmatter {
+                social_link {
                 name
                 url
+                }
               }
             }
           }
         }
       }
     `}
-    render={data => (
+    render={({hp}) => (
       <div
         style={{
           display: 'flex',
@@ -42,7 +45,7 @@ const Bio = ({ normal, size }) => (
         </div>
         <div>
           <p>
-            {data.allConfigYaml.edges[0].node.social_link.map(url => (
+            {hp.edges[0].node.frontmatter.social_link.map(url => (
               <span style={{ padding: 3 }} key={url.name}>
                 <a href={url.url} target="_blank">
                   {url.name}

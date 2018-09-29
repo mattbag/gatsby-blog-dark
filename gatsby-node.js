@@ -48,12 +48,14 @@ exports.createPages = ({ graphql, actions }) => {
 
           const id = post.node.id
           const slug = post.node.fields.slug
+          if(slug.includes('home')) return null
+
           let component = path.resolve(
             `./src/templates/${post.node.frontmatter.templateKey ||
               'blog-post'}.js`
           )
           // let component = slug === '/story/' ? storyPage : blogPost
-
+          
           createPage({
             path: post.node.fields.slug,
             component: component,

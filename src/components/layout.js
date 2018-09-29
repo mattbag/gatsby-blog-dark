@@ -16,12 +16,12 @@ const fonts = [
 ]
 class Layout extends React.Component {
   render() {
-    const { location, children } = this.props
+    const { location, children, template } = this.props
     // const rootPath = `${__PATH_PREFIX__}/`
     // console.log(location)
     return (
       // <PageTransition>
-      <div className={css.pageFade}>
+      <div className={css.pageFade} data-template={template}>
         <Helmet>
           {fonts.map((f,i)=>
             <link
@@ -44,7 +44,7 @@ class Layout extends React.Component {
         >
           {children}
 
-          <div style={{ padding: '4rem 2vmax' }}>
+          <div style={{ padding: '4rem 0' }}>
             <Bio />
             <hr />
           </div>
