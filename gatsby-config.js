@@ -29,7 +29,11 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 800,
+              linkImagesToOriginal: false,
+              withWebp: true,
+              backgroundColor: 'black',
+              quality: 90
             },
           },
           {
@@ -44,12 +48,6 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-page-transitions',
-    //   options: {
-    //     transitionTime: 500,
-    //   },
-    // },
     
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -73,7 +71,6 @@ module.exports = {
         icon: `src/assets/favi.png`,
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-typography',
@@ -81,6 +78,7 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-netlify-cms`,
     // 'gatsby-plugin-netlify'
     //gatsby-plugin-netlify
